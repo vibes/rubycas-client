@@ -23,11 +23,7 @@ class CasProxyCallbackController < ActionController::Base
     
     # TODO: pstore contents should probably be encrypted...
 
-    if Rails::VERSION::MAJOR > 2
-      casclient = RubyCAS::Filter.client
-    else
-      casclient = CASClient::Frameworks::Rails::Filter.client
-    end
+    casclient = CASClient::Frameworks::Rails::Filter.client
 
     casclient.ticket_store.save_pgt_iou(pgtIou, pgtId)
 
