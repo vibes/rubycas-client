@@ -5,7 +5,9 @@ require 'rails/engine'
 
     config.to_prepare do
       Rails.application.routes.prepend do
-        match 'cas_proxy_callback/:action', :controller => 'cas_proxy_callback', :as => :cas_proxy_callback
+        match 'login', :controller => :cas_session, :action => :new, :as => :login
+        match 'logout', :controller => :cas_session, :action => :destroy, :as => :logout
+        match 'cas_proxy_callback/:action', :controller => :cas_proxy_callback, :as => :cas_proxy_callback
       end
     end
 
