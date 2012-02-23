@@ -1,4 +1,4 @@
-class CasProxyCallbackController < ActionController::Base
+class CasSessionController < ActionController::Base
 
   def destroy
     CASClient::Frameworks::Rails::Filter.logout self
