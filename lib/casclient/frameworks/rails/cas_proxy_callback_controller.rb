@@ -23,7 +23,7 @@ class CasProxyCallbackController < ActionController::Base
     
     # TODO: pstore contents should probably be encrypted...
 
-    if Rails::VERSION::MAJOR > 2
+    if Rails::VERSION::MAJOR > 3
       casclient = RubyCAS::Filter.client
     else
       casclient = CASClient::Frameworks::Rails::Filter.client
