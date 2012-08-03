@@ -71,6 +71,7 @@ autoload :ACTIVE_RECORD_TICKET_STORE, 'casclient/tickets/storage/active_record_t
 if defined?(Rails)
   require 'casclient/frameworks/rails/filter'
   require 'casclient/frameworks/rails/cas_proxy_callback_controller'
+  require 'casclient/frameworks/rails/cas_session_controller'
 end
 
 # Detect legacy configuration and show appropriate error message
