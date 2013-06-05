@@ -65,7 +65,7 @@ module CASClient
       ::ACTIVE_RECORD_TICKET_STORE = ActiveRecordTicketStore
 
       class CasPgtiou < ActiveRecord::Base
-        attr_accessible :pgt_iou , :pgt_id
+        #attr_accessible :pgt_iou , :pgt_id
         #t.string :pgt_iou, :null => false
         #t.string :pgt_id, :null => false
         #t.timestamps
